@@ -36,7 +36,14 @@ function initMap() {
     subdomains: 'abcd'
   }).addTo(map);
 
-  map.on('click', () => { closeDetail(); clearActive(); });
+  map.on('click', () => {
+    closeDetail();
+    clearActive();
+    if (!sheetCollapsed) {
+      sheetCollapsed = true;
+      document.getElementById('bottomSheet')?.classList.add('collapsed');
+    }
+  });
 }
 
 // ─── UI Init ────────────────────────────────

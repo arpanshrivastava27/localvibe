@@ -580,7 +580,7 @@ body {
 }
 
 .bottom-sheet.collapsed {
-    transform: translateY(calc(100% - 48px - var(--safe-bottom)));
+    transform: translateY(calc(100% - 28px - var(--safe-bottom)));
 }
 
 .sheet-handle {
