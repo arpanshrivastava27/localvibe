@@ -1,12 +1,12 @@
 // LocalVibe Service Worker — offline caching
-const CACHE_NAME = 'localvibe-v2';
+const CACHE_NAME = 'localvibe-v3';
 const ASSETS = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/app.js',
-    '/places-data.js',
-    '/i18n.js'
+    '/localvibe/',
+    '/localvibe/index.html',
+    '/localvibe/style.css',
+    '/localvibe/app.js',
+    '/localvibe/places-data.js',
+    '/localvibe/i18n.js'
 ];
 
 self.addEventListener('install', e => {

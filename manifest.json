@@ -2,7 +2,7 @@
   "name": "LocalVibe",
   "short_name": "LocalVibe",
   "description": "Your walking companion. Discover food, heritage, and hidden gems as you walk.",
-  "start_url": "/",
+  "start_url": "/localvibe/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
