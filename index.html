@@ -12,8 +12,8 @@
     content="LocalVibe — Your walking companion. Discover food, heritage, and hidden gems as you walk. Smart proximity alerts, signature dishes, and local vibes.">
   <title>LocalVibe</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+  <link rel="apple-touch-icon" href="/localvibe/icon.svg">
+  <link rel="icon" type="image/svg+xml" href="/localvibe/icon.svg">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -23,7 +23,10 @@
 
   <!-- Loading -->
   <div class="loading-screen" id="loadScreen">
-    <div class="l-logo">🗺️</div>
+    <div class="l-logo" style="margin-bottom: 8px;">
+      <img src="/localvibe/icon.svg"
+        style="width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 12px 30px rgba(255, 65, 108, 0.4);">
+    </div>
     <div class="l-spinner"></div>
     <div class="l-text">Finding places...</div>
   </div>
@@ -44,7 +47,9 @@
   <header class="top-bar">
     <div class="top-row">
       <div class="logo">
-        <div class="logo-dot">🗺️</div>
+        <div class="logo-dot" style="background: transparent; box-shadow: none;">
+          <img src="/localvibe/icon.svg" style="width: 100%; height: 100%; border-radius: 6px;">
+        </div>
         <span class="logo-name">LocalVibe</span>
       </div>
       <div class="search-wrap">
