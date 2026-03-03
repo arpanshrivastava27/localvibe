@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#000000">
+  <meta name="description"
+    content="LocalVibe — Your walking companion. Discover food, heritage, and hidden gems as you walk. Smart proximity alerts, signature dishes, and local vibes.">
+  <title>LocalVibe</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Loading -->
+  <div class="loading-screen" id="loadScreen">
+    <div class="l-logo">🗺️</div>
+    <div class="l-spinner"></div>
+    <div class="l-text">Finding places...</div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Proximity Notification -->
+  <div class="prox-notif" id="proxNotif"></div>
+
+  <!-- Area Briefing Overlay -->
+  <div class="area-briefing" id="areaBriefing">
+    <div class="area-bg" onclick="closeAreaBriefing()"></div>
+    <div class="area-card"></div>
+  </div>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="top-row">
+      <div class="logo">
+        <div class="logo-dot">🗺️</div>
+        <span class="logo-name">LocalVibe</span>
+      </div>
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search places, dishes, vibes..."
+          autocomplete="off">
+      </div>
+      <div class="lang-picker" style="position: relative;">
+        <button class="lang-btn" onclick="toggleLang(event)">🌐</button>
+        <div class="lang-dropdown" id="langDrop"></div>
+      </div>
+    </div>
+    <div class="cat-bar" id="catBar"></div>
+  </header>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <!-- Location Button -->
+  <button class="loc-btn" id="locBtn">📍</button>
+
+  <!-- Bottom Sheet -->
+  <div class="bottom-sheet" id="bottomSheet">
+    <div class="sheet-handle" id="sheetHandle">
+      <div class="sheet-handle-bar"></div>
+    </div>
+    <div class="sheet-head">
+      <span class="sheet-title" id="sheetTitle">✨ Discover</span>
+      <span class="sheet-count" id="sheetCount">0 places</span>
+    </div>
+    <div class="sort-bar" id="sortBar"></div>
+    <div class="places-list" id="placesList"></div>
+  </div>
+
+  <!-- Detail Panel -->
+  <div class="detail-bg" id="detailBg" onclick="closeDetail()"></div>
+  <div class="detail-panel" id="detailPanel"></div>
+
+  <script src="places-data.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Register service worker for PWA
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(() => { });
+    }
+  </script>
+</body>
+
+</html>
