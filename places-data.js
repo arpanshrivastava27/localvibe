@@ -55,6 +55,23 @@ const AREA_BRIEFINGS = {
         vibe: 'chaotic',
         safetyTip: 'Very crowded. Keep belongings close. Best explored on foot or e-rickshaw.',
         bounds: { minLat: 28.648, maxLat: 28.662, minLng: 77.225, maxLng: 77.240 }
+    },
+    'Gurgaon': {
+        name: 'DLF Cyber Hub',
+        nameHi: 'डीएलएफ साइबर हब',
+        tagline: 'The corporate powerhouse meets nightlife',
+        taglineHi: 'कॉर्पोरेट पावरहाउस और नाइटलाइफ़ का संगम',
+        description: 'India\'s first integrated food and entertainment destination. A futuristic pedestrian-only zone surrounded by glass skyscrapers, featuring the best breweries, global cuisine, and corporate buzz.',
+        descriptionHi: 'भारत का पहला एकीकृत फूड और मनोरंजन स्थल।',
+        mustDo: [
+            { emoji: '🍺', text: 'Brewery-hop in Sector 29' },
+            { emoji: '🍜', text: 'Try Pan-Asian at Cyber Hub' },
+            { emoji: '☕', text: 'People-watch at Galleria Market' }
+        ],
+        bestTime: 'Post-work Friday (7 PM onwards)',
+        vibe: 'modern',
+        safetyTip: 'Very safe, pedestrian-friendly. Parking can be tough on weekends.',
+        bounds: { minLat: 28.460, maxLat: 28.500, minLng: 77.060, maxLng: 77.100 }
     }
 };
 
@@ -485,6 +502,92 @@ const CURATED_PLACES = {
             tags: ['street-food', 'chaat', 'iconic'],
             image: '🥣',
             pingMessage: 'Natraj Dahi Bhalle! The chaat king of Chandni Chowk — get the dahi bhalla 🥣'
+        }
+    ],
+
+    gurgaon: [
+        {
+            id: 'ggg-1',
+            name: 'Cyber Hub',
+            nameHi: 'साइबर हब',
+            category: 'nightlife',
+            cuisine: 'Global · Bars',
+            lat: 28.4950, lng: 77.0888,
+            rating: 4.6, reviewCount: 45000, visitorCount: 850000, priceLevel: 3,
+            signatureDish: { name: 'Bar Hopping & Global Cuisine', emoji: '🍻', nameHi: 'बार हॉपिंग' },
+            menuHighlights: [
+                { rank: 1, name: 'Cocktails at The Wine Company', emoji: '🍷', tag: 'Most Ordered', orders: '150K+', price: '₹400+' },
+                { rank: 2, name: 'Sushi at Burma Burma', emoji: '🍣', tag: 'Fan Favorite', orders: '85K+', price: '₹600' },
+                { rank: 3, name: 'Coffee at Blue Tokai', emoji: '☕', tag: 'Morning Fix', orders: '60K+', price: '₹250' }
+            ],
+            vibe: 'The swankiest food and entertainment destination in India',
+            vibeHi: 'भारत का सबसे शानदार फूड और एंटरटेनमेंट डेस्टिनेशन',
+            hours: '10:00 AM – 1:00 AM',
+            tags: ['nightlife', 'premium', 'corporate-hub'],
+            image: '🏙️',
+            pingMessage: 'Welcome to Cyber Hub! The corporate jungle meets world-class nightlife 🍻'
+        },
+        {
+            id: 'ggg-2',
+            name: 'Striker Pub & Brewery',
+            nameHi: 'स्ट्राइकर पब',
+            category: 'nightlife',
+            cuisine: 'Brewery · Bar Bites',
+            lat: 28.4682, lng: 77.0628,
+            rating: 4.3, reviewCount: 8200, visitorCount: 52000, priceLevel: 2,
+            signatureDish: { name: 'Craft Wheat Beer', emoji: '🍺', nameHi: 'क्राफ्ट व्हीट बीयर' },
+            menuHighlights: [
+                { rank: 1, name: 'Wheat Beer Pitcher', emoji: '🍺', tag: 'Most Ordered', orders: '120K+', price: '₹850' },
+                { rank: 2, name: 'Chilli Chicken', emoji: '🍗', tag: 'Bar Snack King', orders: '65K+', price: '₹450' },
+                { rank: 3, name: 'Apple Cider Beer', emoji: '🍎', tag: 'Fan Favorite', orders: '40K+', price: '₹300/mug' }
+            ],
+            vibe: 'The OG Gurgaon brewery — loud music, great beer, big crowds',
+            vibeHi: 'गुड़गांव की असली ब्रूअरी',
+            hours: '12:00 PM – 12:00 AM',
+            tags: ['brewery', 'loud', 'friends'],
+            image: '🍺',
+            pingMessage: 'Sector 29! You\'re near Striker Brewery — grab a fresh wheat craft beer 🍺'
+        },
+        {
+            id: 'ggg-3',
+            name: 'Galleria Market',
+            nameHi: 'गैलेरिया मार्केट',
+            category: 'shopping',
+            lat: 28.4680, lng: 77.0850,
+            rating: 4.2, reviewCount: 15000, visitorCount: 120000, priceLevel: 2,
+            signatureDish: { name: 'Cafés & Boutique Shopping', emoji: '🛍️', nameHi: 'कैफे और बुटीक शॉपिंग' },
+            menuHighlights: [
+                { rank: 1, name: 'Cold coffee at Sakley\'s', emoji: '☕', tag: 'Most Ordered', orders: '30K+', price: '₹220' },
+                { rank: 2, name: 'Chocolates at Choko La', emoji: '🍫', tag: 'Sweet Tooth', orders: '15K+', price: '₹400' },
+                { rank: 3, name: 'Bookstore browsing', emoji: '📚', tag: 'Relaxing', orders: '' }
+            ],
+            vibe: 'Gurgaon’s original neighborhood hangout spot',
+            vibeHi: 'गुड़गांव का मूल हैंगआउट स्पॉट',
+            hours: '11:00 AM – 10:00 PM',
+            tags: ['shopping', 'cafes', 'chill'],
+            image: '🛍️',
+            pingMessage: 'You are at Galleria! The best neighborhood market in Gurgaon for a coffee date ☕'
+        },
+        {
+            id: 'ggg-4',
+            name: 'Prankster',
+            nameHi: 'प्रैंकस्टर',
+            category: 'nightlife',
+            cuisine: 'Brewery · Modern Indian',
+            lat: 28.4685, lng: 77.0630,
+            rating: 4.4, reviewCount: 6500, visitorCount: 45000, priceLevel: 3,
+            signatureDish: { name: 'Dahi Bhalla Ice Cream', emoji: '🍨', nameHi: 'दही भल्ला आइसक्रीम' },
+            menuHighlights: [
+                { rank: 1, name: 'Dahi Bhalla Ice Cream', emoji: '🍨', tag: 'Most Unique', orders: '20K+', price: '₹350' },
+                { rank: 2, name: 'Craft IPA', emoji: '🍺', tag: 'Most Ordered', orders: '50K+', price: '₹325/mug' },
+                { rank: 3, name: 'Butter Chicken Sliders', emoji: '🍔', tag: 'Fan Favorite', orders: '35K+', price: '₹420' }
+            ],
+            vibe: 'College campus theme with insane molecular Indian street food',
+            vibeHi: 'कॉलेज कैंपस थीम के साथ बेहतरीन भारतीय स्ट्रीट फूड',
+            hours: '12:00 PM – 1:00 AM',
+            tags: ['quirky', 'brewery', 'fusion'],
+            image: '🎓',
+            pingMessage: 'Prankster is right here! Try their wild Dahi Bhalla Ice Cream 🍨'
         }
     ]
 };
